@@ -1,8 +1,29 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Chart } from 'chart.js';  // Ensure chart.js is installed and imported properly
+// import { Chart } from 'chart.js';  // Ensure chart.js is installed and imported properly
 import { NotificationCardComponent } from "./card/notification-card/notification-card.component"; // Import NotificationCardComponent
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import {
+  Chart,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  BarController,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+// Register the required components
+Chart.register(
+  BarElement,
+  CategoryScale,
+  LinearScale,
+  BarController,
+  Title,
+  Tooltip,
+  Legend
+);
 
 @Component({
   selector: 'app-laboratin-notifications',
